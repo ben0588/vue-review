@@ -16,7 +16,7 @@
 
     <div class="mt-80">
       <div class="container">
-        <div class="row row-cols-2 row-cols-md-4 g-2 g-sm-2 px-0">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-7 px-0">
           <div class="col" v-for="item in products" :key="item.id">
             <div class="products-cred border border-0">
               <div class="card-img-container">
@@ -109,7 +109,6 @@ export default {
       if (storedWishes) {
         this.wishList = JSON.parse(storedWishes);
       }
-      console.log(this.wishList);
     },
     addToWishList(product) {
       const index = this.wishList.find((item) => item.id === product.id);
@@ -119,9 +118,7 @@ export default {
         this.wishList.push(product);
       }
     },
-    addToCart(product) {
-      console.log('cart', product);
-    },
+    addToCart() {},
     isWishListed(item) {
       // 使用 some() 方法來檢查願望清單中是否有 item 的 id
       return this.wishList.some((wishItem) => wishItem.id === item.id);
@@ -145,7 +142,10 @@ export default {
   overflow: hidden;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-
+  /* width: 255px;
+  @media (max-width: 375px) {
+    width: 165px;
+  } */
   &:hover {
     /* pointer-events: none; */
     opacity: 0.85;
@@ -153,11 +153,11 @@ export default {
 }
 
 .card-img-container {
-  width: 255px;
+  /* width: 255px; */
   height: 255px;
   @media (max-width: 375px) {
     height: 165px;
-    width: 165px;
+    /* width: 165px; */
   }
 }
 

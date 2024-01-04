@@ -19,7 +19,10 @@ const router = createRouter({
       name: 'wishlist',
       component: () => import('../views/WishView.vue')
     }
-  ]
+  ],
+  scrollBehavior() {
+    return { top: 0 };
+  }
 });
 
 export default router;

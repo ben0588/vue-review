@@ -3,7 +3,7 @@ import imageUrl from '../assets/img001.png';
 </script>
 
 <template>
-  <footer class="footer-container position-relative">
+  <footer class="footer-container position-relative fixed-bottom">
     <div class="footer-mx-container px-0 h-100">
       <div class="row h-100">
         <div class="col-12 col-lg-4 pt-5 overflow-hidden">

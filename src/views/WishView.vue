@@ -52,7 +52,6 @@ export default {
       if (storedWishes) {
         this.wishList = JSON.parse(storedWishes);
       }
-      console.log(this.wishList);
     },
     addToWishList(product) {
       const index = this.wishList.find((item) => item.id === product.id);
@@ -62,9 +61,7 @@ export default {
         this.wishList.push(product);
       }
     },
-    addToCart(product) {
-      console.log('cart', product);
-    },
+    addToCart() {},
     isWishListed(item) {
       // 使用 some() 方法來檢查願望清單中是否有 item 的 id
       return this.wishList.some((wishItem) => wishItem.id === item.id);
